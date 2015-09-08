@@ -1,0 +1,8 @@
+{
+	"preset": "airbnb",
+  "esnext": true,
+  "excludeFiles": ["node_modules/**", "src/core/AJAX"],
+	"disallowTrailingComma": null,
+	"requireCamelCaseOrUpperCaseIdentifiers": null,
+	"disallowQuotedKeysInObjects": null
+}
