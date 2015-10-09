@@ -12,10 +12,10 @@ var deps = [
 ];
 
 var config = {
-  entry: './src/app.js',
+  entry: './src/index.js',
 
   output: {
-    filename: 'app.[hash].js',
+    filename: 'index.[hash].js',
     path: './dist/',
   },
 
