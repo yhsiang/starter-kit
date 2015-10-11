@@ -2,6 +2,7 @@ import OS from 'os';
 import Path from 'path';
 import webpack from 'webpack';
 
+
 const interfaces = OS.networkInterfaces(),
 
       privateInterface = [].concat(...Object.keys(interfaces).map(name => interfaces[name]))
@@ -11,7 +12,9 @@ const interfaces = OS.networkInterfaces(),
                              address.split('.', 2).toString() === '192,168'
                            ),
 
-      NODE_MODULES_DIR = Path.join(__dirname, '../node_modules');
+      NODE_MODULES_DIR = Path.join(__dirname, '../node_modules'),
+
+      PROJECT_DIR = Path.join(__dirname, '..');
 
 var config = {
   entry: {
@@ -85,7 +88,7 @@ var config = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
 
-    root: NODE_MODULES_DIR,
+    root: [NODE_MODULES_DIR, PROJECT_DIR],
 
     alias: {
       'react/addons' : Path.resolve(NODE_MODULES_DIR, 'react/dist/react-with-addons.min.js'),

@@ -4,6 +4,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var LESS_LOADER = ExtractTextPlugin.extract('style', 'css!less');
 
 var node_modules_dir = path.join(__dirname, '../node_modules');
+var project_dir = path.join(__dirname, '..');
 
 var deps = [
   'bluebird/js/browser/bluebird.min.js',
@@ -53,6 +54,7 @@ var config = {
     alias: {
       'react/addons' : path.resolve(node_modules_dir, 'react/dist/react-with-addons.min.js'),
     },
+    root: [node_modules_dir, project_dir],
     fallback: []
   },
 

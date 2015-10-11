@@ -1,6 +1,5 @@
 import superagent from 'superagent';
-
-const API_ROOT = 'http://bifrost.tw.appier:2341'
+import {API_ROOT} from 'config';
 
 class ApiClient {
   constructor(req) {
